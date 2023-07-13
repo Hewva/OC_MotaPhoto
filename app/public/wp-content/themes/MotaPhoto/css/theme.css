@@ -1,0 +1,15 @@
+/* HEADER*/
+#site-header.sticky-top{
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: green;
+}
+
+/* FOOTER */
+#site-footer {
+    padding: 20px;
+    text-align: center;
+    color: #6d6d6d;
+    background-color: #C8D6CF !important;
+ }
