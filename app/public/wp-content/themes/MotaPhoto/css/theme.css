@@ -1,4 +1,50 @@
-/* HEADER*/
+/********** Add your custom styles here **********/
+
+/***Poppins***/
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Black.ttf') format('truetype'),
+    url('fonts/Poppins-BlackItalic.ttf') format('truetype'),
+    url('fonts/Poppins-Bold.ttf') format('truetype'),
+    url('fonts/Poppins-BoldItalic.ttf') format('truetype'),
+    url('fonts/Poppins-ExtraBold.ttf') format('truetype'),
+    url('fonts/Poppins-ExtraBoldItalic.ttf') format('truetype'),
+    url('fonts/Poppins-ExtraLight.ttf') format('truetype'),
+    url('fonts/Poppins-ExtraLightItalic.ttf') format('truetype'),
+    url('fonts/Poppins-Italic.ttf') format('truetype'),
+    url('fonts/Poppins-Light.ttf') format('truetype'),
+    url('fonts/Poppins-LightItalic.ttf') format('truetype'),
+    url('fonts/Poppins-Medium.ttf') format('truetype'),
+    url('fonts/Poppins-MediumItalic.ttf') format('truetype'),
+    url('fonts/Poppins-Regular.ttf') format('truetype'),
+    url('fonts/Poppins-SemiBold.ttf') format('truetype'),
+    url('fonts/Poppins-SemiBoldItalic.ttf') format('truetype'),
+    url('fonts/Poppins-Thin.ttf') format('truetype'),
+    url('fonts/Poppins-ThinItalic.ttf') format('truetype'),
+}
+
+/***SpaceMono***/
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-Bold.ttf') format('truetype'),
+    url('fonts/SpaceMono-BoldItalic.ttf') format('truetype'),
+    url('fonts/SpaceMono-Italic.ttf') format('truetype'),
+    url('fonts/SpaceMono-Regular.ttf') format('truetype'),
+}
+
+/***Colors***/
+:root {
+    --rouge: #E00000; /* var(--rouge) */
+    --noir: #000; /*var(--noir) */
+    --gris-medium: #D8D8D8; /*var(--gris-medium) */
+    --rouge-secondaire: #FE5858; /*var(--rouge-secondaire) */
+    --bleu-fonc: #313144; /*var(--bleu-fonc) */
+    --gris-light: #E5E5E5; /*var(--gris-light) */
+    --rouge-tertiaire: #FFD6D6; /*var(--rouge-tertiaire) */
+    --gris-fonc: #C4C4C4; /*var(--gris-fonc) */
+  }
+
+/* HEADER */
 #site-header.sticky-top{
     position: sticky;
     z-index: 10;
@@ -10,6 +56,6 @@
 #site-footer {
     padding: 20px;
     text-align: center;
-    color: #6d6d6d;
-    background-color: #C8D6CF !important;
+    color: red;
+    background-color: yellow !important;
  }
