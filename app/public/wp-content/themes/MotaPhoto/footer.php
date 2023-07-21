@@ -1,4 +1,4 @@
-<footer id="site-footer" class="header-footer-group"> 
+<footer id="site-footer" class="menu-footer-container"> 
     <!-- Pour afficher le secondary menu crée dans WP -->
 <?php wp_nav_menu(array('theme_location' => 'footer'));?>
         </footer><!-- #site-footer -->
