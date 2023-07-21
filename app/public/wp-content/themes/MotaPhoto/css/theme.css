@@ -85,15 +85,27 @@ p {
     list-style-type: none;
 }
 
-
-
-
-
 /* FOOTER */
 #site-footer {
     padding: 20px;
     text-align: center;
  }
+
+ #site-footer.menu-footer-container {
+    display: flex;
+    justify-content: center;
+ }
+
+ #site-footer.menu-footer-container li {
+    margin: 0 10px;
+    display: inline-block;
+ }
+
+ #site-footer.menu-footer-container a {
+    text-decoration: none;
+    list-style-type: none;
+ }
+
 
  /* MODALE */
  /* The Modal (background) */
