@@ -44,18 +44,77 @@
     --gris-fonc: #C4C4C4; /*var(--gris-fonc) */
   }
 
+  /* Import de la font Roboto depuis Google Fonts et on l'applique sur tous les éléments de la page 
+body * {
+    font-family: 'Roboto', sans-serif;
+ } */
+
+ /* On applique un gris plus clair sur les paragraphes 
+p {
+    color: #313332;
+ } */
+
 /* HEADER */
-#site-header.sticky-top{
-    position: sticky;
-    z-index: 10;
-    top: 0;
-    background-color: green;
+.site-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
 }
+
+.custom-logo-link{
+    padding-left: 75px;
+}
+
+#site-logo img{
+    width: 216px;
+    height: 14px;
+}
+
+.main-navigation{
+    padding-right: 75px;
+}
+
+#primary-menu li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#primary-menu a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+
 
 /* FOOTER */
 #site-footer {
     padding: 20px;
     text-align: center;
-    color: red;
-    background-color: yellow !important;
  }
+
+ /* MODALE */
+ /* The Modal (background) */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content/Box */
+.modal-container {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
