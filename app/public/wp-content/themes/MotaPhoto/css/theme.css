@@ -112,7 +112,6 @@ p {
 .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -124,9 +123,63 @@ p {
 
 /* Modal Content/Box */
 .modal-container {
-    background-color: #fefefe;
+    background-color: #fff;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border: 5px solid var(--noir);
+    width: 600px; /* Could be more or less, depending on screen size */
+    height: 769px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 160px; 
+}
+
+.modal-container img{
+    height: 107px;
+    margin-top: 135px;
+} 
+
+.modal-container input[type="text"],
+.modal-container input[type="email"] {
+    width: 300px;
+    height: 63px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    margin-bottom: 15px;
+}
+
+.modal-form-container{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-container textarea{
+    width: 300px;
+    height: 210px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+}
+
+.modal-container label{
+    font-size: 15px;
+}
+
+.modal-container input[type="submit"]{
+    background-color: var(--gris-medium)!important;
+    color: var(--noir)!important;
+    border: 1px solid #B8BBC2;
+    border-radius: 2px;
+    width: 300px;
+    height: 63px;
+}
+
+.modal-container input[type="submit"]:hover{
+    background-color: var(--noir)!important;
+    color: #fff!important;
 }
