@@ -54,7 +54,7 @@ p {
     color: #313332;
  } */
 
-/* HEADER */
+/* HEADER 
 .site-header-container{
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ p {
 #primary-menu a {
     text-decoration: none;
     list-style-type: none;
-}
+} */
 
 /* FOOTER */
 #site-footer {
@@ -107,27 +107,27 @@ p {
  }
 
 
- /* MODALE */
- /* The Modal (background) */
+ /* MODALE 
+ 
 .modal {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
     
-}
+} /*
 
-/* Modal Content/Box */
+/* Modal Content/Box 
 .modal-container {
     background-color: #fff;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 5px solid var(--noir);
-    width: 600px; /* Could be more or less, depending on screen size */
+    width: 600px; 
     height: 769px;
     display: flex;
     flex-direction: column;
@@ -182,4 +182,106 @@ p {
 .modal-container input[type="submit"]:hover{
     background-color: var(--noir)!important;
     color: #fff!important;
+} */
+
+/* Body 
+body{
+    width: 1440px;
+    height: 960px;
+} */
+
+/* Modale */
+.modal-contact{
+    border: 5px solid var(--noir);
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 597px;
+    height: 769px;
+    background-color: #fff;
+
+}
+
+.modal-body{
+    border: 5px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.modal-content{
+    border: 5px solid green;
+    }
+
+.modal-contact .wpcf7 [type="email"],
+.modal-contact .wpcf7 [type="text"],
+.modal-contact .wpcf7 textarea {
+    width: 263px;
+    height: 40px;
+    border: 1px solid var(--gris-medium);
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-contact .wpcf7 textarea{
+    height: 210px;
+}
+
+/* Bouton envoyer */
+.modal-contact .wpcf7 input[type="submit"] {
+    display: flex;
+    width: 263px;
+    height: 50px;
+    padding: 8px 15px;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--gris-medium)!important;
+    color: var(--noir)!important;
+}
+
+/* Bouton envoyer au survol */
+.modal-contact .wpcf7 input[type="submit"]:hover {
+    background-color: var(--noir)!important;
+    color: #fff!important;
+}
+
+/* Header */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.logo img{
+    width: 216px;
+    height: 14px;
+    margin-left: 55px;
+}
+
+.primary-menu{
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 150px;
+}
+
+.primary-menu .menu li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.primary-menu a {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+
 }
