@@ -7,42 +7,44 @@
  * @since Twenty Fifteen 1.0
  */
  
-get_header(); ?>
- 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
+get_header(); ?>   
  
         <?php
         // Start the loop.
-        while ( have_posts() ) : the_post();
- 
-            /*
-             * Include the post format-specific template for the content. If you want to
-             * use this in a child theme, then include a file called called content-___.php
-             * (where ___ is the post format) and that will be used instead.
-             */
-            get_template_part( 'content', get_post_format() );
- 
-            // If comments are open or we have at least one comment, load up the comment template.
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
- 
-            // Previous/next post navigation.
-            the_post_navigation( array(
-                'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="post-title">%title</span>',
-            ) );
+        while ( have_posts() ) : the_post(); ?>
+        <div class="photo-content">
+        <div class="photo-container">
+        <div class="photo-filters">
+
+        </div>
+            <h2>
+                <?php the_title() ?>
+            </h2>
+<div class="field">
+    <p class = "photo-field">"Référence":
+    <span id="photo-ref">
+        <?php get_field('reference'); ?></span>
+     </p>
+    <p class = "photo-field">"Catégorie":
+    <?php echo get_the_terms(get_the_ID(), 'categorie'); ?>
+     </p>
+     <p class = "photo-field">"Type":
+    <?php echo get_the_terms(get_the_ID(), 'type'); ?>
+     </p>
+     <p class = "photo-field">"Format":
+    <?php echo get_the_terms(get_the_ID(), 'format'); ?>
+     </p>
+     <p class = "photo-field">"Année":
+    <?php echo date('Y'); ?>
+     </p>
+</div>
+<div class="photo-catalog">
+    <?php the_post_thumbnail(); ?>
+</div>
+        <?php  get_template_part( 'content', get_post_format() );
  
         // End the loop.
         endwhile;
         ?>
- 
-        </main><!-- .site-main -->
-    </div><!-- .content-area -->
  
 <?php get_footer(); ?>
