@@ -27,11 +27,28 @@ get_header(); ?>
     <div class= "photo-img">    
     <?php the_post_thumbnail('full'); ?>
 </div>
-<!-- En dessous des infos de droite -->
+<!-- Bloc 118px en dessous à gauche (texte et bouton contact) -->
 <div class ="photo-info-behind">
     <p>Cette pohoto vous intéresse ?</p>
-    <button id="contact-button" class="modal-contact-link" data-photo-ref="<?php echo get_field('reference'); ?>
+    <button id="contact-button" class="modal-contact-link" data-photo-ref="<?php echo get_field('reference'); ?>">Contact</button>
 </div>
+<!-- Bloc 118px en dessous à droite (miniatures et flèches de navigation) -->
+<div class= "photo-links">
+    <?php
+    $prev_post = get_previous_post();
+    $next_post = get_next_post();
+    ?>
+    <?php if (!empty($prev_post)) : ?>
+        <a href="<?php echo get_permalink($prev_post->ID); ?>"class="prev-link">
+        <img src="<?php echo get_stylesheet_directory_uri() ; ?>/images/arrowL.png" alt="Précédent"/></a>
+        <?php endif; ?>
+        <?php if (!empty($next_post)) : ?>
+        <a href="<?php echo get_permalink($next_post->ID); ?>"class="next-link">
+        <img src="<?php echo get_stylesheet_directory_uri() ; ?>/images/arrowR.png" alt="Suivant"/></a>
+        <?php endif; ?>
+</div>
+</div>
+
         <?php  get_template_part( 'content', get_post_format() );
  
         // End the loop.
