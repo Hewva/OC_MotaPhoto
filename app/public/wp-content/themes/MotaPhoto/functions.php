@@ -7,9 +7,11 @@ function theme_enqueue_styles(){
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
     // Chargement du fichier scripts
-    wp_enqueue_script( 'child-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1.0', true );
+    wp_enqueue_script('jquery');
+    wp_enqueue_script( 'child-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), '1.0', true );
 }
-// Ajouter taxonomies au CPT 
+
+// fonction pour créer une taxonomie personnalisée
 function motaphoto_register_taxonomies () {
 
     // Taxonomie "Catégorie"
@@ -35,7 +37,7 @@ function motaphoto_register_taxonomies () {
     'show_in_rest'  	=> true,
     );
 
-    register_taxonomy('catégorie', array( 'photo' ), $args);
+    register_taxonomy('categ', array( 'photo' ), $args);
 
 // Taxonomie "Format"
 $labels = array(
@@ -63,5 +65,5 @@ $args = array(
 register_taxonomy('format', array( 'photo' ), $args);
 }
 
-add_action('init', 'motaphoto_register_taxonomies');
+add_action('init', 'motaphoto_register_taxonomies'); 
 
